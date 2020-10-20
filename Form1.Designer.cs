@@ -37,8 +37,8 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.iconCurrentChildrenFrom = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildFrom = new System.Windows.Forms.Label();
+            this.iconCurrentChildrenFrom = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -60,7 +60,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 450);
+            this.panelMenu.Size = new System.Drawing.Size(220, 527);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSelling
@@ -211,9 +211,19 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(580, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(762, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // lblTitleChildFrom
+            // 
+            this.lblTitleChildFrom.AutoSize = true;
+            this.lblTitleChildFrom.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitleChildFrom.Location = new System.Drawing.Point(57, 27);
+            this.lblTitleChildFrom.Name = "lblTitleChildFrom";
+            this.lblTitleChildFrom.Size = new System.Drawing.Size(32, 13);
+            this.lblTitleChildFrom.TabIndex = 1;
+            this.lblTitleChildFrom.Text = "Inicio";
             // 
             // iconCurrentChildrenFrom
             // 
@@ -228,23 +238,13 @@
             this.iconCurrentChildrenFrom.TabIndex = 0;
             this.iconCurrentChildrenFrom.TabStop = false;
             // 
-            // lblTitleChildFrom
-            // 
-            this.lblTitleChildFrom.AutoSize = true;
-            this.lblTitleChildFrom.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildFrom.Location = new System.Drawing.Point(57, 27);
-            this.lblTitleChildFrom.Name = "lblTitleChildFrom";
-            this.lblTitleChildFrom.Size = new System.Drawing.Size(32, 13);
-            this.lblTitleChildFrom.TabIndex = 1;
-            this.lblTitleChildFrom.Text = "Inicio";
-            // 
             // panelShadow
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 75);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(580, 9);
+            this.panelShadow.Size = new System.Drawing.Size(762, 9);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
@@ -253,20 +253,20 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(580, 366);
+            this.panelDesktop.Size = new System.Drawing.Size(762, 443);
             this.panelDesktop.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(982, 527);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sistema G-Shop";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();

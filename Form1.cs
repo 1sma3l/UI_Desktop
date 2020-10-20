@@ -27,14 +27,19 @@ namespace UI_Desktop
             leftborderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftborderBtn);
 
-            //Formulario
+            //Propiedades para el formulario
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;//Al maximizar se ajusta al area de trabajo sin quitar la barra de tareas
         }
 
-        //Estructura para almacenar colores RGB
+       
+        #region Colores
+        /// <summary>
+        /// Estructura para almacenar colores RGB 
+        /// colores para las opciones del menú principal
+        /// </summary>
         private struct RGBColor
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -44,10 +49,17 @@ namespace UI_Desktop
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
+        #endregion
 
+        #region Activar Boton
+        /// <summary>
+        /// Metodo privado que asigna las propiedades estilisadas al boton
+        /// </summary>
+        /// <param name="senderBtn">boton</param>
+        /// <param name="color">color del boton</param>
         private void ActivateButton(object senderBtn, Color color)
         {
-            if(senderBtn != null)
+            if (senderBtn != null)
             {
                 DisableButton();
                 //Button
@@ -71,10 +83,15 @@ namespace UI_Desktop
 
             }
         }
+        #endregion
 
+        #region Deshabilitar boton
+        /// <summary>
+        /// Metodo que asigna las propiedades de incio al boton
+        /// </summary>
         private void DisableButton()
         {
-            if(currentBtn != null)
+            if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(30, 31, 68);
                 currentBtn.ForeColor = Color.Gainsboro;
@@ -84,10 +101,16 @@ namespace UI_Desktop
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
+        #endregion
 
+        #region Abrir Form hijo
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="childform"></param>
         private void OpenChildForm(Form childform)
         {
-            if(currentChildForm != null)
+            if (currentChildForm != null)
             {
                 //Solo se abre un formulario
                 currentChildForm.Close();
@@ -104,7 +127,9 @@ namespace UI_Desktop
             childform.Show(); //Lo mostramos
             lblTitleChildFrom.Text = childform.Text;//mostramos el texto del formulario en la etiqueta de "Inicio"
         }
+        #endregion
 
+        #region Eventos de botones
         private void btnDash_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color1);
@@ -137,10 +162,16 @@ namespace UI_Desktop
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
+            if (currentChildForm != null)
+                currentChildForm.Close(); //Cerramos el formulario hijo que se encuentre abierto
             Reset();
         }
+        #endregion
 
+        #region Reset
+        /// <summary>
+        /// Metodo que reincia los controles y visualizaciones al estado Inicial
+        /// </summary>
         private void Reset()
         {
             DisableButton();
@@ -149,7 +180,13 @@ namespace UI_Desktop
             iconCurrentChildrenFrom.IconColor = Color.MediumPurple;
             lblTitleChildFrom.Text = "Inicio";
         }
+        #endregion
 
+        #region DLL
+        /// <summary>
+        /// Se importan las DLL para realizar accion especial
+        /// en el Form
+        /// </summary>
         //Dibujar form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -163,5 +200,7 @@ namespace UI_Desktop
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
+
     }
 }
