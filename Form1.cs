@@ -202,7 +202,7 @@ namespace UI_Desktop
         }
         #endregion
 
-        #region MyRegion
+        #region Cargar formulario
         /// <summary>
         /// Carga del fomulario
         /// </summary>
@@ -214,7 +214,7 @@ namespace UI_Desktop
         }
         #endregion
 
-        #region MyRegion
+        #region Timer
         /// <summary>
         /// Evento tick del control timer
         /// alli se asigna el formato de hora y fecha a etiquetas

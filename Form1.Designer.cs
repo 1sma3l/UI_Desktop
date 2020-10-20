@@ -56,7 +56,6 @@
             // 
             // panelMenu
             // 
-            resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panelMenu.Controls.Add(this.btnSelling);
             this.panelMenu.Controls.Add(this.btnMarketing);
@@ -64,6 +63,7 @@
             this.panelMenu.Controls.Add(this.btnOrder);
             this.panelMenu.Controls.Add(this.btnDash);
             this.panelMenu.Controls.Add(this.panelLogo);
+            resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
             // 
             // btnSelling
@@ -143,24 +143,24 @@
             // 
             // panelLogo
             // 
-            resources.ApplyResources(this.panelLogo, "panelLogo");
             this.panelLogo.Controls.Add(this.btnHome);
+            resources.ApplyResources(this.panelLogo, "panelLogo");
             this.panelLogo.Name = "panelLogo";
             // 
             // btnHome
             // 
-            resources.ApplyResources(this.btnHome, "btnHome");
             this.btnHome.Image = global::UI_Desktop.Properties.Resources.inicio;
+            resources.ApplyResources(this.btnHome, "btnHome");
             this.btnHome.Name = "btnHome";
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelTitleBar
             // 
-            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panelTitleBar.Controls.Add(this.lblTitleChildFrom);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildrenFrom);
+            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -172,28 +172,28 @@
             // 
             // iconCurrentChildrenFrom
             // 
-            resources.ApplyResources(this.iconCurrentChildrenFrom, "iconCurrentChildrenFrom");
             this.iconCurrentChildrenFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.iconCurrentChildrenFrom.ForeColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildrenFrom.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildrenFrom.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildrenFrom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildrenFrom.IconSize = 51;
+            this.iconCurrentChildrenFrom.IconSize = 50;
+            resources.ApplyResources(this.iconCurrentChildrenFrom, "iconCurrentChildrenFrom");
             this.iconCurrentChildrenFrom.Name = "iconCurrentChildrenFrom";
             this.iconCurrentChildrenFrom.TabStop = false;
             // 
             // panelShadow
             // 
-            resources.ApplyResources(this.panelShadow, "panelShadow");
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            resources.ApplyResources(this.panelShadow, "panelShadow");
             this.panelShadow.Name = "panelShadow";
             // 
             // panelDesktop
             // 
-            resources.ApplyResources(this.panelDesktop, "panelDesktop");
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.panelDesktop.Controls.Add(this.lblFecha);
             this.panelDesktop.Controls.Add(this.lblHora);
+            resources.ApplyResources(this.panelDesktop, "panelDesktop");
             this.panelDesktop.Name = "panelDesktop";
             // 
             // lblFecha
@@ -204,8 +204,8 @@
             // 
             // lblHora
             // 
-            resources.ApplyResources(this.lblHora, "lblHora");
             this.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.lblHora, "lblHora");
             this.lblHora.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblHora.Name = "lblHora";
             // 
@@ -224,7 +224,6 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

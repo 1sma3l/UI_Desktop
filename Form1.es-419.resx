@@ -164,6 +164,9 @@
   <data name="panelShadow.Size" type="System.Drawing.Size, System.Drawing">
     <value>641, 9</value>
   </data>
+  <data name="panelDesktop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>641, 473</value>
+  </data>
   <data name="lblFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -177,15 +180,15 @@
     <value>NoControl</value>
   </data>
   <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 34</value>
+    <value>6, 34</value>
   </data>
   <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>386, 107</value>
-  </data>
-  <data name="panelDesktop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>641, 473</value>
+    <value>623, 107</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>861, 557</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
 </root>
