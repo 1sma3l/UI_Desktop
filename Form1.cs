@@ -202,5 +202,31 @@ namespace UI_Desktop
         }
         #endregion
 
+        #region MyRegion
+        /// <summary>
+        /// Carga del fomulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timerHr.Enabled = true; //Habilitamos el control timer
+        }
+        #endregion
+
+        #region MyRegion
+        /// <summary>
+        /// Evento tick del control timer
+        /// alli se asigna el formato de hora y fecha a etiquetas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timerHr_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("t");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+        #endregion
+
     }
 }
